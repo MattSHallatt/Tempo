@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tempo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agr-rd-f40" customClass="TempoButton" customModule="Tempo" customModuleProvider="target">
+                                <rect key="frame" x="56" y="217" width="302" height="302"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="agr-rd-f40" secondAttribute="height" multiplier="1:1" id="62Y-Kb-wCx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-Id-q2m" userLabel="IncreaseTempo">
+                                <rect key="frame" x="177" y="137" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Bs-7b-ExU"/>
+                                    <constraint firstAttribute="width" constant="60" id="OPt-cF-wHb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="increaseTempo" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Od8-mE-cmj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vc-aG-qa0" userLabel="DecreaseTempo">
+                                <rect key="frame" x="177" y="539" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7Xw-cG-Ti5"/>
+                                    <constraint firstAttribute="height" constant="60" id="ny8-oQ-0nr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decreaseTempo" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2UA-hb-JfX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3vc-aG-qa0" firstAttribute="top" secondItem="agr-rd-f40" secondAttribute="bottom" constant="20" id="6W3-Ic-ov0"/>
+                            <constraint firstAttribute="centerX" secondItem="3vc-aG-qa0" secondAttribute="centerX" id="MeL-YH-e3k"/>
+                            <constraint firstAttribute="centerY" secondItem="agr-rd-f40" secondAttribute="centerY" id="We1-XT-1ia"/>
+                            <constraint firstItem="agr-rd-f40" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="XNB-J5-i5O"/>
+                            <constraint firstItem="agr-rd-f40" firstAttribute="top" secondItem="hdc-Id-q2m" secondAttribute="bottom" constant="20" id="gxN-Nz-Iix"/>
+                            <constraint firstAttribute="centerX" secondItem="hdc-Id-q2m" secondAttribute="centerX" id="kCH-I8-wUn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="agr-rd-f40" secondAttribute="trailing" constant="40" id="mVV-rQ-hQq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tempoButton" destination="agr-rd-f40" id="EYi-wK-dlP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
